@@ -222,9 +222,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"~/Documents/Intercom",
-					"$(SRCROOT)/../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Carthage/Build/**",
+					"$(SRCROOT)/../../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Carthage/Build/**",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -243,9 +242,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"~/Documents/Intercom",
-					"$(SRCROOT)/../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Carthage/Build/**",
+					"$(SRCROOT)/../../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Carthage/Build/**",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
