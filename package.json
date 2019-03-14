@@ -1,5 +1,5 @@
 {
-  "name": "react-native-intercom",
+  "name": "@tanda/react-native-intercom",
   "version": "13.0.1",
   "description": "A React Native client for Intercom.io",
   "main": "./lib/IntercomClient.js",
@@ -27,8 +27,8 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tinycreative/react-native-intercom/issues"
+    "url": "https://github.com/TandaHQ/react-native-intercom/issues"
   },
-  "homepage": "https://github.com/tinycreative/react-native-intercom",
+  "homepage": "https://github.com/TandaHQ/react-native-intercom",
   "dependencies": {}
 }

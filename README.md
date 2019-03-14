@@ -1,26 +1,35 @@
 # react-native-intercom
-React Native wrapper for Intercom.io. Based off of [intercom-cordova](https://github.com/intercom/intercom-cordova)
+
+React Native wrapper for Intercom.io. Based off of 
+[intercom-cordova](https://github.com/intercom/intercom-cordova)
+
+This fork removes a framework header search path that causes problems as 
+highlighted in tinycreative/react-native-intercom#40. For that reason, it likely 
+doesn't support the manual linking method.
 
 # Installation Guide
 
-1. [Install Intercom for iOS](https://developers.intercom.com/installing-intercom/docs/ios-installation) via whichever method you prefer.
+1. [Install Intercom for 
+   iOS](https://developers.intercom.com/installing-intercom/docs/ios-installation) 
+   via whichever method you prefer.
 
-    More recently others have had more success [Installing Intercom Manually](https://developers.intercom.com/installing-intercom/docs/ios-installation#section-option-3-install-intercom-manually).
+    More recently others have had more success [Installing Intercom Manually 
+    ](https://developers.intercom.com/installing-intercom/docs/ios-installation#section-option-3-install-intercom-manually).
 
     In the past, [installing via CocoaPods](https://developers.intercom.com/installing-intercom/docs/ios-installation#section-option-1-cocoapods) was recommended.
 
 
 1. Install `react-native-intercom`:
 
-    ```bash
-    yarn add react-native-intercom  # or npm install react-native-intercom
-    ```
+```bash
+yarn add react-native-intercom  # or npm install react-native-intercom
+```
 
 1. Link native dependencies
 
-    ```bash
-    react-native link react-native-intercom
-    ```
+```bash
+react-native link react-native-intercom
+```
 
 1. Manually Link the library in Xcode ([Linking librarys on iOS](https://facebook.github.io/react-native/docs/linking-libraries-ios.html))
 
@@ -231,21 +240,25 @@ var Intercom = require('react-native-intercom');
 ```
 
 ### Log an event
+
 ```javascript
 Intercom.logEvent('viewed_screen', { extra: 'metadata' });
 ```
 
 ### Register a Logged In user
+
 ```javascript
 Intercom.registerIdentifiedUser({ userId: 'bob' });
 ```
 
 ### Register Unidentified user
+
 ```javascript
 Intercom.registerUnidentifiedUser();
 ```
 
 ### Register a Logged In user and post extra metadata
+
 ```javascript
 Intercom.registerIdentifiedUser({ userId: 'bob' })
 Intercom.updateUser({
@@ -268,31 +281,37 @@ Intercom.updateUser({
 ```
 
 ### Set User Hash for Identity Validation (optional)
+
 ```javascript
 Intercom.setUserHash(hash_received_from_backend)
 ```
 
 ### Sign Out
+
 ```javascript
 Intercom.logout()
 ```
 
 ### Show Message Composer
+
 ```javascript
 Intercom.displayMessageComposer();
 ```
 
 ### Show Message Composer with an Initial Message
+
 ```javascript
 Intercom.displayMessageComposerWithInitialMessage('Initial Message');
 ```
 
 ### Set Bottom Padding
+
 ```javascript
 Intercom.setBottomPadding(64);
 ```
 
 ### Listen for Unread Conversation Notifications
+
 ```javascript
 componentDidMount() {
   Intercom.addEventListener(Intercom.Notifications.UNREAD_COUNT, this._onUnreadChange)
@@ -307,6 +326,7 @@ _onUnreadChange = ({ count }) => {
 }
 ```
 ### Other Notifications
+
 ```javascript
     // The window was hidden
     Intercom.Notifications.WINDOW_DID_HIDE
@@ -316,7 +336,8 @@ _onUnreadChange = ({ count }) => {
 ```
 
 ### Send FCM token directly to Intercom for push notifications (Android only)
-```
+
+```javascript
 Firebase.messaging().getToken()
   .then((token) => {
     console.log('Device FCM Token: ', token);
